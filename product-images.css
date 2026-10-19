@@ -1,0 +1,12 @@
+/* Normalize the visible package bounds, preserving every source image's ratio. */
+.chocolate-product[data-product="0"]{--pack-width:65.571%;--pack-left:17.286%;--pack-top:7.714%}
+.chocolate-product[data-product="1"]{--pack-width:64.876%;--pack-left:17.633%;--pack-top:8.587%}
+.chocolate-product[data-product="2"]{--pack-width:74.939%;--pack-left:12.612%;--pack-top:-6.000%}
+.chocolate-product[data-product="3"]{--pack-width:83.077%;--pack-left:9.638%;--pack-top:-5.566%}
+.chocolate-product[data-product="4"]{--pack-width:65.600%;--pack-left:17.059%;--pack-top:6.047%}
+.chocolate-product[data-product="5"]{--pack-width:97.660%;--pack-left:-0.213%;--pack-top:-34.255%}
+.chocolate-product[data-product="6"]{--pack-width:105.517%;--pack-left:-0.575%;--pack-top:-20.805%}
+.chocolate-product[data-product="7"]{--pack-width:78.462%;--pack-left:10.684%;--pack-top:-12.222%}
+.chocolate-grid .chocolate-product .product-image{aspect-ratio:1;position:relative;overflow:hidden}
+.chocolate-grid .chocolate-product .product-image>img{position:absolute;display:block;left:var(--pack-left);top:var(--pack-top);width:var(--pack-width);height:auto;max-width:none;padding:0;object-fit:contain;transform-origin:center}
+

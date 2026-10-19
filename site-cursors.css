@@ -1,0 +1,27 @@
+html,
+body {
+    cursor: url('./assets/cursor-default.png') 2 2, auto;
+}
+
+a,
+button,
+summary,
+select,
+label[for],
+[role='button'],
+input:is([type='button'], [type='submit'], [type='reset'], [type='checkbox'], [type='radio'], [type='range']),
+.review-column,
+.review-column .review-card {
+    cursor: url('./assets/cursor-default.png') 2 2, pointer;
+}
+
+input:is([type='text'], [type='email'], [type='search'], [type='password']),
+textarea,
+[contenteditable='true'] {
+    cursor: text;
+}
+
+body:active,
+body:active * {
+    cursor: url('./assets/cursor-click.png') 10 17, pointer !important;
+}

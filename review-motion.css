@@ -1,0 +1,12 @@
+.review-scroll-track,.review-scroll-group{display:flex;flex-direction:column;gap:58.726rem}
+.review-scroll-track{position:relative;will-change:transform}
+.review-scroll-group{flex-shrink:0}
+.review-column{touch-action:pan-x;cursor:grab;user-select:none;-webkit-user-select:none}
+.review-column .review-card{cursor:grab}
+.reviews .review-card .review-copy{background:#fff;color:var(--color-brown);transition:background-color .2s}
+@media(hover:hover){.reviews .review-card:hover .review-copy{background:var(--color-primary)}}
+.review-column.is-dragging,.review-column.is-dragging *{cursor:grabbing!important}
+.review-column img{-webkit-user-drag:none;user-select:none}
+@media(max-width:767px){.review-scroll-track,.review-scroll-group{gap:20px}}
+.review-motion-toggle{display:block;margin-top:18rem;color:#8b7358;font-size:14rem;line-height:1.6;text-decoration:underline;text-underline-offset:4rem}
+@media(max-width:767px){.review-motion-toggle{margin-top:12px;font-size:10px;text-underline-offset:3px}}

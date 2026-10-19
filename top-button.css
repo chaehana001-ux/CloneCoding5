@@ -1,0 +1,34 @@
+/* One viewport-fixed TOP control shared by the entire page. */
+.top-button.floating-top {
+    position: fixed;
+    right: max(28px, env(safe-area-inset-right));
+    bottom: max(28px, env(safe-area-inset-bottom));
+    z-index: 20;
+    scale: .512;
+    transform-origin: bottom right;
+    width: 78px;
+    height: 78px;
+    border: 2px solid #b69351;
+    border-radius: 50%;
+    background: #3c2115;
+    color: #e8cf91;
+    box-shadow: inset 0 0 0 5px #4e3020, 0 5px 16px #3c211526;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font: 600 18px/1 Pretendard, sans-serif;
+    letter-spacing: 2.5px;
+    transition: background .2s, box-shadow .2s, transform .2s;
+}
+.floating-top .top-button-arrow { width: 22px; height: 22px; color: inherit; }
+.floating-top .top-button-arrow:before { left: 4px; top: 2px; width: 13px; height: 13px; border-width: 2px; }
+.floating-top .top-button-arrow:after { left: 11px; top: 2px; width: 2px; height: 22px; }
+.top-button.floating-top:hover { background: #573624; box-shadow: inset 0 0 0 5px #65412a, 0 7px 18px #3c21152b; transform: translateY(-3px); }
+.top-button.floating-top:focus-visible { outline: 2px solid #b69351; outline-offset: 5px; }
+@media (max-width: 767px) {
+    .top-button.floating-top { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: 62px; height: 62px; font-size: 14px; gap: 8px; letter-spacing: 2px; box-shadow: inset 0 0 0 4px #4e3020, 0 5px 14px #3c211526; }
+    .floating-top .top-button-arrow { transform: scale(.8); }
+}
+@media (prefers-reduced-motion: reduce) { .top-button.floating-top { transition: none; } .top-button.floating-top:hover { transform: none; } }

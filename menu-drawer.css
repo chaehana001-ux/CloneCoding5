@@ -1,0 +1,8 @@
+body.menu-drawer-open{overflow:hidden}
+.menu-drawer-backdrop{position:fixed;inset:0;z-index:99;background:#28170db3;backdrop-filter:blur(3px)}
+.site-menu.menu-drawer{position:fixed;left:0;right:auto;top:0;bottom:0;width:min(420px,88vw);height:100dvh;min-width:0;margin:0;padding:30px 32px 40px;overflow-y:auto;background:#fffcf5;border:0;border-right:1px solid #e9dfc8;border-radius:0;box-shadow:15px 0 50px #28170d26;z-index:100;overscroll-behavior:contain}
+.menu-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:30px;margin-bottom:20px;border-bottom:1px solid #e5d8bd}
+.menu-drawer-head>img{width:145px;height:auto}.menu-drawer-close{font-family:Arial,sans-serif;font-size:30px;line-height:1;width:40px;height:40px;display:grid;place-items:center;color:#6e5037;border-radius:50%}.menu-drawer-close:hover{background:#f4e9ce}
+.site-menu.menu-drawer>a,.site-menu.menu-drawer>button{display:block;width:100%;padding:18px 8px;font:500 17px/1.5 NanumSquareNeo,sans-serif;letter-spacing:-.5px;text-align:left;color:#60442f;border-bottom:1px solid #eee5d4;border-radius:0;transition:background-color .2s,color .2s}
+.site-menu.menu-drawer>a:hover,.site-menu.menu-drawer>button:hover{background:#f7efd9;color:#9e7b36}
+@media(max-width:767px){.site-menu.menu-drawer{padding:25px 23px 35px}.menu-drawer-head{padding-bottom:24px;margin-bottom:12px}.menu-drawer-head>img{width:135px}.site-menu.menu-drawer>a,.site-menu.menu-drawer>button{font-size:15px;padding:17px 6px}}
