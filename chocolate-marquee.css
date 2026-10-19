@@ -147,7 +147,6 @@
   left: 0;
   top: calc(238rem - 10px);
   width: 273rem;
-  filter: grayscale(1) sepia(.12) brightness(1.75) contrast(.82);
   z-index: 2;
 }
 .figma-banner-group > .figma-banner-brush {
