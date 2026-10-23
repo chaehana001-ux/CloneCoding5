@@ -195,18 +195,3 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape' && !c
 document.querySelectorAll('[data-notice]').forEach(button => button.addEventListener('click', () => openDialog('<h2 id="dialog-title">' + escapeHTML(button.dataset.notice) + '</h2><p>2024.08.15</p><p>원본 디자인에는 공지 제목과 날짜만 제공되어 있습니다. 상세 내용은 고객센터에 문의해 주세요.</p>')));
 document.querySelector('[data-notices]')?.addEventListener('click', () => openDialog('<h2 id="dialog-title">공지사항</h2>' + [...document.querySelectorAll('[data-notice]')].map(item => '<p>' + escapeHTML(item.dataset.notice) + ' · 2024.08.15</p>').join('')));
 
-// Replace the text only when the supplied title artwork is available locally.
-[
-  {id: 'travel-title', src: './assets/whittakers-chocolate-title.png', alt: 'Whittaker’s Chocolate'},
-  {id: 'events-title', src: './assets/whittakers-sweetness-title.png', alt: 'Little Moments, Big Sweetness'}
-].forEach(artwork => {
-  const image = new Image();
-  image.alt = artwork.alt;
-  image.onload = () => {
-    const title = document.getElementById(artwork.id);
-    title.classList.add('has-title-art');
-    title.replaceChildren(image);
-  };
-  image.src = artwork.src;
-});
-

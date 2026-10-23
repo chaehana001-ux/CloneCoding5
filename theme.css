@@ -18,10 +18,14 @@
   font-display: swap;
 }
 :root {
-  --color-primary: #edcb85;
+  /* The logo is hand-lettered; this warm old-style serif carries the same
+     heritage character while remaining readable for longer Korean copy. */
+  --font-brand: Georgia, "Iowan Old Style", "Palatino Linotype", "Noto Serif KR", Batang, serif;
+  --font-utility: Pretendard, "Malgun Gothic", Arial, sans-serif;
+  --color-primary: #f3d689;
   --color-lime: #ffe18b;
   --color-price: #8b5e3c;
-  --color-orange: #edcb85;
+  --color-orange: #f3d689;
   --color-ink: #4e352a;
   --color-muted: #8c7b70;
   --color-surface: #fff8e9;
@@ -29,11 +33,34 @@
   --color-brown-deep: #3c1d0e;
   --color-cream: #fff8e9;
   --color-yellow-light: #ffe9a5;
+  --brand-brown: #4e352a;
+  --brand-cream: #faf0d5;
+  --brand-gold: #f3d689;
+  --brand-deep: #4f3920;
 }
 body {
-  font-family: NanumSquareNeo, Pretendard, sans-serif;
+  font-family: var(--font-utility);
   color: var(--color-brown);
   background: #fff;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* A slightly more editorial treatment echoes the sweeping Whittaker's mark. */
+h1,
+h2,
+h3,
+.product-title,
+.review-copy > strong,
+dialog h2 {
+  font-family: var(--font-brand);
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 .sr-only {
   position: absolute;
@@ -65,6 +92,7 @@ body {
     height: 39.18px;
   }
 }
+
 .site-menu > button {
   display: block;
   width: 100%;
@@ -1386,5 +1414,353 @@ dialog .chocolate-dialog-image {
   .product:hover,
   .top-button:hover {
     transform: none;
+  }
+}
+
+/* Whittaker's editorial storefront — reference-led page-wide refinement. */
+html {
+  background: #f7f0df;
+}
+
+body {
+  background: #f7f0df;
+  color: #492817;
+}
+
+.bicycle-art {
+  display: none;
+}
+
+.catalogue {
+  gap: 88rem;
+  margin: 0;
+  padding: 78rem 0 110rem;
+  background: var(--brand-cream);
+}
+
+.catalogue-section.content-width {
+  width: min(1780rem, calc(100% - 96rem));
+}
+
+.catalogue .section-heading {
+  margin-bottom: 38rem;
+  text-align: center;
+}
+
+.catalogue .section-heading h2,
+.catalogue #travel-title,
+.catalogue #events-title {
+  color: #58301c;
+  font-family: var(--font-brand) !important;
+  font-size: 58rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -2.2rem;
+  text-transform: none;
+  transform: none;
+}
+
+.catalogue .section-heading p {
+  max-width: 760rem;
+  margin: 14rem auto 0;
+  color: #735642;
+  font-family: var(--font-utility);
+  font-size: 17rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.catalogue .list-heading {
+  justify-content: center;
+  margin: 0 0 30rem;
+}
+
+.catalogue .more {
+  margin: 0;
+  padding: 12rem 24rem;
+  border: 0;
+  background: #62361f;
+  color: #fff8e9;
+  font-size: 13rem;
+  letter-spacing: 1.2rem;
+}
+
+.catalogue .more img {
+  display: none;
+}
+
+.product-grid {
+  gap: 20rem;
+}
+
+.product,
+.review-card {
+  border: 1rem solid #d9cbb533;
+  border-radius: 10rem;
+  box-shadow: 0 5rem 16rem #4e352a0c;
+}
+
+.product {
+  padding-bottom: 20rem;
+  background: #fffcf5;
+}
+
+.product:hover {
+  transform: translateY(-5rem);
+  box-shadow: 0 12rem 25rem #4e352a17;
+}
+
+.chocolate-product .product-image {
+  aspect-ratio: 1.08;
+  margin-bottom: 18rem;
+  background: #fbf6e9;
+}
+
+.chocolate-product .product-image > img {
+  padding: 16rem 26rem;
+}
+
+.chocolate-product .product-title {
+  min-height: 62rem;
+  padding-inline: 18rem;
+  color: #432516;
+  font-family: var(--font-brand) !important;
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: 1.38 !important;
+}
+
+.chocolate-description {
+  margin-top: 8rem;
+  padding-inline: 18rem;
+  color: #806b5a;
+  font-size: 13rem;
+  line-height: 1.65;
+}
+
+.chocolate-format {
+  margin-top: 18rem;
+  padding-inline: 18rem;
+  font-size: 10rem;
+}
+
+.chocolate-format > span {
+  font-size: 12rem;
+}
+
+#events {
+  padding-top: 70rem;
+  border-top: 1rem solid #8e6a4429;
+}
+
+.reviews {
+  background: var(--brand-cream);
+}
+
+/* Brand system from the visual direction: brown, cream and restrained gold. */
+html,
+body {
+  background: var(--brand-cream);
+  color: var(--brand-brown);
+}
+
+.catalogue .section-heading h2,
+.catalogue #travel-title,
+.catalogue #events-title {
+  color: var(--brand-deep);
+}
+
+.catalogue .section-heading p,
+.chocolate-description {
+  color: #6e5849;
+}
+
+.catalogue .more {
+  background: var(--brand-brown);
+  color: var(--brand-cream);
+}
+
+.product,
+.review-card {
+  border-color: #4e352a1f;
+  background: #fffaf0;
+  box-shadow: 0 8rem 24rem #4e352a12;
+}
+
+.chocolate-product .product-image {
+  background: #f8ebcc;
+}
+
+.campaign-product {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300rem, .65fr);
+  min-height: 390rem;
+  overflow: hidden;
+  border: 1rem solid #4e352a24;
+  border-radius: 14rem;
+  background: #fffaf0;
+  box-shadow: 0 12rem 32rem #4e352a14;
+}
+
+.campaign-product-media {
+  position: relative;
+  min-height: 390rem;
+  overflow: hidden;
+  background: var(--brand-deep);
+}
+
+.campaign-product-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-product-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 65%, #4f39202e);
+  pointer-events: none;
+}
+
+.campaign-product-media > span {
+  position: absolute;
+  left: 24rem;
+  bottom: 22rem;
+  z-index: 1;
+  padding: 9rem 14rem;
+  border-radius: 999rem;
+  background: var(--brand-gold);
+  color: var(--brand-deep);
+  font-size: 11rem;
+  font-weight: 800;
+  letter-spacing: 1.8rem;
+}
+
+.campaign-product-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 46rem 44rem;
+}
+
+.campaign-kicker {
+  color: #9b7229;
+  font-size: 11rem;
+  font-weight: 800;
+  letter-spacing: 2.2rem;
+}
+
+.campaign-product h3 {
+  margin-top: 12rem;
+  color: var(--brand-deep);
+  font-family: var(--font-brand);
+  font-size: 43rem;
+  line-height: 1.08;
+}
+
+.campaign-product p {
+  margin-top: 20rem;
+  color: #6e5849;
+  font-size: 16rem;
+  line-height: 1.8;
+}
+
+.campaign-product a {
+  width: fit-content;
+  margin-top: 28rem;
+  padding-bottom: 5rem;
+  border-bottom: 1rem solid var(--brand-brown);
+  color: var(--brand-brown);
+  font-size: 14rem;
+  font-weight: 800;
+}
+
+@media (max-width: 767px) {
+  .campaign-product {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-radius: 9px;
+  }
+
+  .campaign-product-media {
+    min-height: 0;
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .campaign-product-media > span {
+    left: 14px;
+    bottom: 13px;
+    padding: 7px 10px;
+    font-size: 8px;
+  }
+
+  .campaign-product-copy {
+    padding: 24px 20px 26px;
+  }
+
+  .campaign-kicker { font-size: 8px; }
+  .campaign-product h3 { margin-top: 8px; font-size: 29px; }
+  .campaign-product p { margin-top: 12px; font-size: 12px; }
+  .campaign-product a { margin-top: 18px; font-size: 11px; }
+}
+
+@media (max-width: 767px) {
+  .catalogue {
+    gap: 58px;
+    padding: 48px 0 68px;
+  }
+
+  .catalogue-section.content-width {
+    width: calc(100% - 28px);
+  }
+
+  .catalogue .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .catalogue .section-heading h2,
+  .catalogue #travel-title,
+  .catalogue #events-title {
+    height: auto;
+    font-size: 34px;
+    letter-spacing: -1.3px;
+  }
+
+  .catalogue .section-heading p {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .catalogue .list-heading {
+    margin-bottom: 22px;
+  }
+
+  .catalogue .more {
+    padding: 9px 18px;
+    font-size: 9px;
+  }
+
+  .product-grid {
+    gap: 10px;
+  }
+
+  .product {
+    border-radius: 7px;
+    padding-bottom: 14px;
+  }
+
+  .chocolate-product .product-image {
+    aspect-ratio: 1;
+  }
+
+  .chocolate-product .product-image > img {
+    padding: 8px 10px;
+  }
+
+  #events {
+    padding-top: 46px;
   }
 }

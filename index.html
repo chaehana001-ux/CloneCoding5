@@ -15,16 +15,17 @@
         <link rel="stylesheet" href="./footer.css" />
         <link rel="stylesheet" href="./product-images.css" />
         <link rel="stylesheet" href="./chocolate-brand.css" />
-        <link rel="stylesheet" href="./chocolate-marquee.css" />
+        <link rel="stylesheet" href="./chocolate-marquee.css?v=3" />
         <link rel="stylesheet" href="./menu-drawer.css" />
         <link rel="stylesheet" href="./collection-titles.css" />
         <link rel="stylesheet" href="./closing-marquee.css" />
         <link rel="stylesheet" href="./site-cursors.css" />
         <link rel="stylesheet" href="./hero.css?v=4" />
         <link rel="stylesheet" href="./top-button.css" />
+        <link rel="stylesheet" href="./brand-system.css?v=12" />
         <script src="./script.js" defer></script>
         <script src="./reviews.js" defer></script>
-        <script src="./chocolate-marquee.js" defer></script>
+        <script src="./chocolate-marquee.js?v=3" defer></script>
     </head>
     <body id="top">
         <a class="skip-link" href="#main">본문 바로가기</a>
@@ -95,12 +96,22 @@
             </div>
         </nav>
         <main id="main">
-            <section class="choco-hero-pin" aria-label="Whittaker's Berry and Biscuit 캠페인 영상">
+            <section class="choco-hero-pin" aria-labelledby="berry-biscuit-title">
                 <div class="choco-hero">
-                    <video class="choco-hero-video" autoplay muted loop playsinline preload="auto" aria-label="Whittaker's New Zealand Berry and Biscuit 캠페인 영상">
-                        <source src="./assets/Whittakers NZ Berry _ Biscuit LTC.mp4" type="video/mp4" />
-                        브라우저에서 영상을 재생할 수 없습니다.
-                    </video>
+                    <article class="campaign-product campaign-hero">
+                        <div class="campaign-product-media">
+                            <video autoplay muted loop playsinline preload="auto" aria-label="Berry and Biscuit 제품 영상">
+                                <source src="./assets/Whittakers NZ Berry _ Biscuit LTC.mp4" type="video/mp4" />
+                                브라우저에서 영상을 재생할 수 없습니다.
+                            </video>
+                        </div>
+                        <div class="campaign-product-copy">
+                            <span class="campaign-kicker">NEW ZEALAND FAVOURITE</span>
+                            <h1 id="berry-biscuit-title">Berry &amp; Biscuit</h1>
+                            <p>달콤한 베리와 바삭한 비스킷이 밀크 초콜릿 안에서 만나는, 영상 속 바로 그 초콜릿.</p>
+                            <a href="#reviews">영상 속 제품 후기 보기 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -140,7 +151,7 @@
                     aria-labelledby="travel-title"
                 >
                     <div class="section-heading">
-                        <h2 id="travel-title">Whittaker’s Chocolate</h2>
+                        <h2 id="travel-title"><span class="brand-script">Whittaker’s</span> <span>Chocolate</span></h2>
                         <p>
                             부드러운 밀크 초콜릿과 바삭한 크런치의 만남.<br />뉴질랜드 Whittaker’s의
                             네 가지 초콜릿을 만나보세요.
@@ -233,7 +244,7 @@
                     aria-labelledby="events-title"
                 >
                     <div class="section-heading">
-                        <h2 id="events-title" lang="en">Little Moments, Big Sweetness</h2>
+                        <h2 id="events-title" lang="en"><span class="brand-script">Little Moments,</span> <span>Big Sweetness</span></h2>
                         <p>
                             선물처럼 즐기는 초콜릿부터 베이킹을 위한 초콜릿까지.<br />Whittaker’s의
                             다채로운 즐거움을 만나보세요.
@@ -336,10 +347,10 @@
                 <div class="chocolate-brand-art">
                     <img
                         class="brand-feature-art"
-                        src="assets/whittakers-chocolate-feature-dark.png"
-                        alt="휘태커스 로고와 헤이즐넛 초콜릿 아트워크"
-                        width="1692"
-                        height="930"
+                        src="assets/whittakers-chocolate-story-v3.png"
+                        alt="밀크 초콜릿과 헤이즐넛이 놓인 따뜻한 정물"
+                        width="2172"
+                        height="724"
                     />
                 </div>
             </section>
@@ -502,26 +513,12 @@
                 <div class="closing-ribbon" aria-hidden="true">
                     <div class="closing-marquee-track">
                         <div class="closing-marquee-group">
-                            <div class="closing-mark closing-mark-good"><img src="assets/figma-closing-ce38e.png" alt="" /></div>
-                            <div class="closing-mark closing-mark-honest"><img src="assets/figma-closing-a00c0.png" alt="" /></div>
-                            <div class="closing-mark closing-mark-chocolate"><img src="assets/figma-closing-good-honest.png" alt="" /></div>
-                            <img class="closing-doodle" src="assets/figma-closing-2931f.png" alt="" />
-                            <img class="closing-wave-art" src="assets/figma-closing-1f35a.png" alt="" />
-                            <img class="closing-brush-art" src="assets/figma-closing-5c264.png" alt="" />
-                            <img class="closing-almond closing-almond-large" src="assets/figma-closing-1ee39.png" alt="" />
-                            <img class="closing-almond closing-almond-small" src="assets/figma-closing-1ee39.png" alt="" />
-                            <img class="closing-blue-chocolate" src="assets/figma-closing-d4009.png" alt="" />
+                            <span class="closing-text">Good Honest Chocolate</span>
+                            <i aria-hidden="true">✦</i>
                         </div>
                         <div class="closing-marquee-group">
-                            <div class="closing-mark closing-mark-good"><img src="assets/figma-closing-ce38e.png" alt="" /></div>
-                            <div class="closing-mark closing-mark-honest"><img src="assets/figma-closing-a00c0.png" alt="" /></div>
-                            <div class="closing-mark closing-mark-chocolate"><img src="assets/figma-closing-good-honest.png" alt="" /></div>
-                            <img class="closing-doodle" src="assets/figma-closing-2931f.png" alt="" />
-                            <img class="closing-wave-art" src="assets/figma-closing-1f35a.png" alt="" />
-                            <img class="closing-brush-art" src="assets/figma-closing-5c264.png" alt="" />
-                            <img class="closing-almond closing-almond-large" src="assets/figma-closing-1ee39.png" alt="" />
-                            <img class="closing-almond closing-almond-small" src="assets/figma-closing-1ee39.png" alt="" />
-                            <img class="closing-blue-chocolate" src="assets/figma-closing-d4009.png" alt="" />
+                            <span class="closing-text">Good Honest Chocolate</span>
+                            <i aria-hidden="true">✦</i>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 #main {
-  background: #edcb85;
+  background: #faf0d5;
 }
 
 .chocolate-marquee {
@@ -7,7 +7,7 @@
   overflow: hidden;
   height: 418.5rem;
   margin-top: 0;
-  background: #edcb85;
+  background: #f3d689;
   border-radius: 0;
   isolation: isolate;
 }
@@ -70,6 +70,71 @@
     max-width: none;
     left: 0;
     transform: translateY(-50%);
+  }
+}
+
+/* Text-only marquee: a quiet transition between two cream sections. */
+.chocolate-marquee {
+  height: 250rem;
+  background: #faf0d5;
+  border-block: 0;
+}
+
+.chocolate-marquee-track {
+  top: 50%;
+  align-items: center;
+  animation-duration: 34s;
+}
+
+.chocolate-marquee-group {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding-right: 58rem;
+  white-space: nowrap;
+}
+
+.chocolate-marquee-group > span {
+  color: #4f3920;
+  background: linear-gradient(105deg, #4f3920 5%, #69451f 34%, #c6922f 49%, #f0cf72 55%, #9d6b25 63%, #4f3920 92%);
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 76rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -3.5rem;
+}
+
+.chocolate-marquee-group > i {
+  margin-inline: 42rem;
+  color: #b88b32;
+  font-family: Georgia, serif;
+  font-size: 30rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .chocolate-marquee {
+    height: 138px;
+  }
+
+  .chocolate-marquee-group {
+    padding-right: 32px;
+  }
+
+  .chocolate-marquee-group > span {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .chocolate-marquee-group > i {
+    margin-inline: 24px;
+    font-size: 18px;
   }
 }
 
