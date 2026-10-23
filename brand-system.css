@@ -286,12 +286,14 @@ dialog {
 /* Brand story */
 .chocolate-brand {
     height: 620rem;
-    background: var(--brand-deep);
+    background: #684b36;
     color: var(--brand-cream);
 }
 
 .chocolate-brand::before {
-    display: none;
+    display: block;
+    z-index: 1;
+    background: rgb(250 240 213 / 7%);
 }
 
 .chocolate-brand-art {
@@ -306,7 +308,8 @@ dialog {
     max-height: none;
     object-fit: cover;
     object-position: center;
-    filter: none;
+    opacity: .88;
+    filter: saturate(.76) contrast(.9) brightness(1.06);
 }
 
 .chocolate-brand h2,
@@ -494,7 +497,7 @@ dialog::backdrop {
     }
 
     .chocolate-brand::before {
-        display: none;
+        display: block;
     }
 
     .chocolate-brand {
@@ -524,6 +527,7 @@ dialog::backdrop {
         height: 100%;
         object-fit: cover;
         object-position: 36% center;
-        filter: none;
+        opacity: .88;
+        filter: saturate(.76) contrast(.9) brightness(1.06);
     }
 }
